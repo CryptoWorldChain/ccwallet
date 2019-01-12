@@ -1,0 +1,27 @@
+{
+  "name": "ccwallet",
+  "version": "1.0.0",
+  "description": "The CWV browser extensions for Chrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoWorldChain/ccwallet.git"
+  },
+  "keywords": [
+    "cwv",
+    "chrome",
+    "wallet"
+  ],
+  "author": "brew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CryptoWorldChain/ccwallet/issues"
+  },
+  "homepage": "https://github.com/CryptoWorldChain/ccwallet#readme",
+  "dependencies": {
+    "@cwv/cwv.js": "^1.1.0"
+  }
+}

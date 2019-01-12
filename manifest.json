@@ -1,0 +1,6 @@
+ {
+    "name": "CWV Chrome plugin Wallet",
+    "version": "1.0",
+    "description": "used in chrome browser for cwv  wallet.",
+    "manifest_version": 2
+ }
