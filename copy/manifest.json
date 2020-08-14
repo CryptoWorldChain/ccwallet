@@ -1,0 +1,51 @@
+{
+  "name": "签名插件",
+  "description": "浏览器插件",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "浏览器钱包",
+    "default_icon": "logo.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens hello.html"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "run_at": "document_start",
+    "js": ["content.js"]
+  }],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+	"web_accessible_resources": ["inject.js"],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "file://*/*"
+  ],
+  "externally_connectable": {
+    "matches": ["https://marsmanlee.github.io/"]
+  }
+}
